@@ -101,4 +101,5 @@ def disconnect():
     print(f"{name} has left the room {room}")
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True, host="0.0.0.0", port=5000, allow_unsafe_werkzeug=True)
+    # gunicorn -w 2 -b 0.0.0.0:5000 main:app
+    pass
