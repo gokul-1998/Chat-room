@@ -6,7 +6,7 @@ from werkzeug.serving import run_simple
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "hjhjsdahhds"
-socketio = SocketIO(app)
+socketio = SocketIO(app,ping_interval=25, ping_timeout=60)
 
 rooms = {}
 
